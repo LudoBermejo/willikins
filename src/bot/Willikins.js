@@ -15,8 +15,7 @@ function eachKey(object, callback) {
 }
 
 class Willikins {
-  constructor(token, bPhases, cPhrases) {
-    this.token = token;
+  constructor(bPhases, cPhrases) {
     this.builtinPhrases = bPhases;
     this.customPhrases = cPhrases;
   }
@@ -53,8 +52,8 @@ class Willikins {
       });
   }
 
-  init() {
-    console.log(this.token);
+  init(token) {
+    this.token = token;
     this.train = Train;
     this.brain = new Brain();
 

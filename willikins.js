@@ -5,6 +5,6 @@ const customPhrases = require('./data/customPhrases.json');
 // Willikins bot
  const Willikins = require('./src/bot/Willikins');
 
-const willikins = new Willikins( process.argv[2], builtinPhrases, customPhrases );
+const willikins = new Willikins(builtinPhrases, customPhrases );
 
-willikins.init();
+willikins.init(process.argv[2]);
