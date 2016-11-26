@@ -1,0 +1,33 @@
+{
+  "name": "willikins",
+  "version": "1.0.0",
+  "description": "0.1",
+  "main": "willikins.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "bot",
+    "natural",
+    "language",
+    "IA",
+    "themotion"
+    "natural-language"
+  ],
+  "author": "Ludo Bermejo",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-core": "^2.5.2",
+    "karma-jasmine": "^1.0.2"
+  },
+  "dependencies": {
+    "botkit": "^0.4.2",
+    "elizabot": "0.0.2",
+    "natural": "^0.4.0",
+    "request": "^2.79.0",
+    "sentiment": "^2.1.0",
+    "winston": "^2.3.0",
+    "wordnet-db": "^3.1.2",
+    "wordpos": "^1.1.0"
+  }
+}

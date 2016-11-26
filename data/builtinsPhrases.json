@@ -1,0 +1,50 @@
+{
+    "CheckBatches": [
+        "check the batch #batch# for me",
+        "can you check the batch #batch# for me?",
+        "check batch #batch#",
+        "please check the batch #batch#",
+        "give me info about the batch #batch#"
+    ],
+    "GetVideosOfBatch": [
+        "videos of batch #batch#",
+        "give me the videos of #batch#",
+        "videos of #batch# client ebay",
+        "give me the videos of client tryp and batch #batch#"
+    ],
+    "ErrorsOfBatch": [
+        "erros of batch #batch#",
+        "give me the errors of #batch#",
+        "error of #batch# client ebay",
+        "give me the errors of client tryp and batch #batch#",
+        "errors of #batch# and client tryp",
+        "errors batch ebay"
+    ],
+    "ResultsOfBatch": [
+        "give me the result of batch batch",
+        "show me the results of batch #batch# client tryp",
+        "results of batch #batch#",
+        "results #batch#",
+        "results of #batch# and client tryp"
+    ],
+    "HasFinished": [
+        "alert me when batch is finished",
+        "finished batch tryp",
+        "has finished batch #batch#",
+        "is finished batch with tryp",
+        "finish tryp batch #4444#"
+    ],
+    "Uptime": [
+        "uptime",
+        "are you alive?",
+        "are you up?",
+        "status",
+        "current status",
+        "who are you?",
+        "what are you?",
+        "are you alive",
+        "are you up",
+        "who are you",
+        "what are you"
+    ]
+}
