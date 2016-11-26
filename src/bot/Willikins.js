@@ -15,13 +15,10 @@ function eachKey(object, callback) {
 }
 
 class Willikins {
-  constructor(config, builtinPhrases, customPhrases) {
-    this.train = Train;
-    this.brain = new Brain();
-    this.ears = Ears;
-    this.config = config;
-    this.builtinPhrases = builtinPhrases;
-    this.customPhrases = customPhrases;
+  constructor(token, bPhases, cPhrases) {
+    this.token = token;
+    this.builtinPhrases = bPhases;
+    this.customPhrases = cPhrases;
   }
 
   learnPhrases() {
@@ -31,7 +28,7 @@ class Willikins {
   }
 
   startHearing() {
-    this.Ears
+    this.ears
       .listen()
       .hear('TRAINING TIME!!!', (speech, message) => {
         winston.log('info', 'Delegating to on-the-fly training module...');
@@ -57,8 +54,11 @@ class Willikins {
   }
 
   init() {
-    this.Brain = new Brain();
-    this.Ears = new Ears(this.config.slackToken);
+    console.log(this.token);
+    this.train = Train;
+    this.brain = new Brain();
+
+    this.ears = new Ears(this.token);
     this.learnPhrases();
     this.brain.think();
     winston.log('info', 'Willikins finished learning, time to listen...');
