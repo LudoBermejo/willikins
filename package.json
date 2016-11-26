@@ -1,7 +1,7 @@
 {
   "name": "willikins-bot",
-  "version": "1.0.0",
-  "description": "0.1",
+  "version": "0.0.1",
+  "description": "A natural language bot for Themotion (but applicable to third parties)",
   "main": "willikins.js",
   "scripts": {
     "test": "test"
@@ -11,7 +11,7 @@
     "natural",
     "language",
     "IA",
-    "themotion"
+    "themotion",
     "natural-language"
   ],
   "author": "Ludo Bermejo",
