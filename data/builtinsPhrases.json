@@ -9,7 +9,8 @@
         "can you status the batch #batch# for me?",
         "status batch #batch#",
         "please status the batch #batch#",
-        "give me info about the batch #batch#"
+        "give me info about the batch #batch#",
+        "tell me about the batch #batch#"
     ],
     "GetVideosOfBatch": [
         "videos of batch #batch#",
