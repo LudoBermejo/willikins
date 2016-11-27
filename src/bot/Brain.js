@@ -11,6 +11,7 @@ class Brain {
   constructor() {
     this.classifier = new NLP.LogisticRegressionClassifier();
     this.minConfidence = 0.7;
+    this.response = {};
   }
 
   teach(label, phrases) {
@@ -60,8 +61,7 @@ class Brain {
       throw new Error('The invoked skill doesn\'t exist!');
     }
     winston.log('info', `Running skill code for ${skill}...`);
-    skillCode(skill, info, bot, message, senti);
-    return this;
+    return skillCode(skill, info, bot, message, senti);
   }
 }
 

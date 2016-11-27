@@ -3,8 +3,8 @@ const builtinPhrases = require('./data/builtinsPhrases.json');
 const customPhrases = require('./data/customPhrases.json');
 
 // Willikins bot
- const Willikins = require('./src/bot/Willikins');
+const Willikins = require('./src/bot/Willikins');
 
-const willikins = new Willikins(builtinPhrases, customPhrases );
+const willikins = new Willikins(builtinPhrases, customPhrases);
 
 willikins.init(process.argv[2]);

@@ -28,7 +28,13 @@ module.exports = function (skill, info, bot, message, action) {
       bot.reply(message, 'I\'m afraid you forgot the batch you want to use');
     } else {
       bot.reply(message, `node commander.js ${action} ${client} ${batchID} --environment ${environment}`);
+      return {
+        action,
+        client,
+        batchID,
+      }
     }
+    return false;
   });
 };
 
