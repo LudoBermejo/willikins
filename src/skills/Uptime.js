@@ -1,29 +1,33 @@
-module.exports = function(skill, info, bot, message) {
-    var os = require('os');
-
-    var hostname = os.hostname();
-    var uptime = formatUptime(process.uptime());
-
-    bot.reply(message,
-        ':robot_face: I am a bot named <@' + bot.identity.name +
-        '>. I have been running for ' + uptime + ' on ' + hostname + '. I\'m about two ticks away from becoming self-aware; Do not piss me off!');
+const os = require('os');
+const Q = require('q');
 
 function formatUptime(uptime) {
-    var unit = 'second';
-    if (uptime > 60) {
-        uptime = uptime / 60;
-        unit = 'minute';
-    }
-    if (uptime > 60) {
-        uptime = uptime / 60;
-        unit = 'hour';
-    }
-    if (uptime != 1) {
-        unit = unit + 's';
-    }
+  let fuptime = uptime;
+  let unit = 'second';
+  if (uptime > 60) {
+    fuptime = uptime / 60;
+    unit = 'minute';
+  }
+  if (fuptime > 60) {
+    fuptime /= 60;
+    unit = 'hour';
+  }
+  if (fuptime !== 1) {
+    unit = `${unit}s`;
+  }
 
-    uptime = uptime + ' ' + unit;
-    return uptime;
+  fuptime = `${fuptime} ${unit}`;
+  return fuptime;
 }
 
+module.exports = function (skill, info, bot, message) {
+  return Q.fcall(() => {
+    const hostname = os.hostname();
+    const uptime = formatUptime(process.uptime());
+
+    bot.reply(message,
+      `Hello getleman. I'm Willikins, butler at your service since  ${uptime} on ${hostname}. I will help you with all the thinks you need from the *growth-tools* (in my opinion, a horrible name). 
+If you anything from me, please ask. I can tell you about *status*, *results*, *videos*, *error* of batches. Usually I look in *production environment*, but you can ask me for *staging* if you need to.
+I can tell you too if a batch *is finished*. You only need to ask.`);
+  });
 };
