@@ -1,6 +1,3 @@
-// Config
-const config = require('./config/config.json');
-
 // Phrases
 const builtinPhrases = require('./data/builtinsPhrases.json');
 const customPhrases = require('./data/customPhrases.json');
