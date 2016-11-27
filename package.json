@@ -1,6 +1,6 @@
 {
   "name": "willikins-bot",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A natural language bot for Themotion (but applicable to third parties)",
   "main": "willikins-bot.js",
   "scripts": {
