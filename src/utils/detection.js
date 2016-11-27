@@ -35,6 +35,7 @@ module.exports = function (skill, info, bot, message, action) {
         client,
         batchID,
         environment,
+        bot,
       })
     }
     defer.reject();
