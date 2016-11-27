@@ -7,4 +7,6 @@ const Willikins = require('./src/bot/Willikins');
 
 const willikins = new Willikins(builtinPhrases, customPhrases);
 
-willikins.init(process.argv[2]);
+willikins.init(process.argv[2], function(obj) {
+  console.log(obj);
+});

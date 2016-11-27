@@ -34,8 +34,12 @@ class Willikins {
         winston.log('info', 'Willikins interpretation: ', interpretation);
         if (interpretation.guess) {
           winston.log('info', `Invoking skill: ${interpretation.guess}`);
-          const response = this.brain.invoke(interpretation.guess, interpretation, speech, message);
-          if (response && this.callback) this.callback(response);
+          this.brain.invoke(interpretation.guess, interpretation, speech, message)
+            .then((response) => {
+              if (response && this.callback) this.callback(response);
+            })
+            .catch(() => winston.log('debug', 'Nothing to do'))
+
         } else {
           speech.reply(message, 'Hmm... I don\'t have a response what you said... I\'ll save it and try to learn about it later.');
           // speech.reply(message, '```\n' + JSON.stringify(interpretation) + '\n```');

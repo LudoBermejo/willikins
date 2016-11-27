@@ -1,8 +1,10 @@
 const WordPOS = require('wordpos');
+const Q = require('q');
 
 const wordpos = new WordPOS();
 
 module.exports = function (skill, info, bot, message, action) {
+  const defer = Q.defer();
   message.text = message.text.split('-').join('joiningbyhand');
   wordpos.getPOS(message.text, (result) => {
     let client;
@@ -27,14 +29,16 @@ module.exports = function (skill, info, bot, message, action) {
     } else if (!batchID) {
       bot.reply(message, 'I\'m afraid you forgot the batch you want to use');
     } else {
-      bot.reply(message, `node commander.js ${action} ${client} ${batchID} --environment ${environment}`);
-      return {
+      bot.reply(message, `I will ask ${action} for client ${client} and batch ${batchID} in environment ${environment}`);
+      defer.resolve({
         action,
         client,
         batchID,
-      }
+        environment,
+      })
     }
-    return false;
+    defer.reject();
   });
+  return defer.promise;
 };
 
