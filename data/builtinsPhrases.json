@@ -10,13 +10,15 @@
         "status batch #batch#",
         "please status the batch #batch#",
         "give me info about the batch #batch#",
+        "tell me about the status of batch #batch#",
         "tell me about the batch #batch#"
     ],
     "GetVideosOfBatch": [
         "videos of batch #batch#",
         "give me the videos of #batch#",
         "videos of #batch# client ebay",
-        "give me the videos of client tryp and batch #batch#"
+        "give me the videos of client tryp and batch #batch#",
+        "tell me about the videos of client tryp and batch #batch#"
     ],
     "ErrorsOfBatch": [
         "erros of batch #batch#",
@@ -24,21 +26,25 @@
         "error of #batch# client ebay",
         "give me the errors of client tryp and batch #batch#",
         "errors of #batch# and client tryp",
-        "errors batch ebay"
+        "errors batch ebay",
+        "tell me about the errors of client tryp and batch #batch#",
+        "tell me about the error of client tryp and batch #batch#"
     ],
     "ResultsOfBatch": [
         "give me the result of batch batch",
         "show me the results of batch #batch# client tryp",
         "results of batch #batch#",
         "results #batch#",
-        "results of #batch# and client tryp"
+        "results of #batch# and client tryp",
+        "tell me about the results of client tryp and batch #batch#"
     ],
     "HasFinished": [
         "alert me when batch is finished",
         "finished batch tryp",
         "has finished batch #batch#",
         "is finished batch with tryp",
-        "finish tryp batch #4444#"
+        "finish tryp batch #4444#",
+        "tell me about the finalization of client tryp and batch #batch#"
     ],
     "Uptime": [
         "uptime",
