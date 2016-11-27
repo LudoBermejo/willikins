@@ -58,7 +58,7 @@ class Brain {
     try {
       skillCode = require(`./../skills/${skill}`);
     } catch (err) {
-      throw new Error('The invoked skill doesn\'t exist!');
+      throw new Error(`The invoked skill doesn't exist ${skill}!`);
     }
     winston.log('info', `Running skill code for ${skill}...`);
     return skillCode(skill, info, bot, message, senti);

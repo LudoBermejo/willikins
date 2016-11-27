@@ -7,9 +7,11 @@ module.exports = function (skill, info, bot, message, action) {
   const defer = Q.defer();
   message.text = message.text.split('-').join('joiningbyhand');
   wordpos.getPOS(message.text, (result) => {
+
     let client;
     let batchID;
-    const environment = (result.verbs.indexOf('prod') > -1 || result.nouns.indexOf('production') > -1) ? 'prod' : 'staging';
+    const environment = result.nouns.indexOf('staging') > -1 ? 'staging' : 'prod';
+
     result.rest.forEach((data) => {
       if(data) {
         const myData = data.split('joiningbyhand').join('-');
