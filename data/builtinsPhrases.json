@@ -48,9 +48,16 @@
         "tell me about the finalization of client tryp and batch #batch#"
     ],
     "Uptime": [
-        "present yourself",
+        "introduce yourself",
         "tell me about you",
         "what are you?",
+        "help",
         "who are you?"
+    ],
+    "Insult": [
+        "insult @jaime",
+        "insult @jose",
+        "insult @julian",
+        "insult @pepe"
     ]
 }
