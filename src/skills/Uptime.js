@@ -17,7 +17,7 @@ function formatUptime(uptime) {
   }
 
   fuptime = `${fuptime} ${unit}`;
-  return fuptime;
+  return fuptime;æææ
 }
 
 module.exports = function (skill, info, bot, message) {

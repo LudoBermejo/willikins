@@ -45,9 +45,9 @@ class Willikins {
           // speech.reply(message, '```\n' + JSON.stringify(interpretation) + '\n```');
 
           // append.write [message.text] ---> to a file
-          fs.appendFile('phrase-errors.txt',
+          fs.appendFile(`${__dirname}/../../newData/phrase-errors.txt`,
             `\nChannel: ${message.channel} User:${message.user} - ${message.text}`, (err) => {
-              winston.log('info', `\n\tBrain Err: Appending phrase for review\n\t\t${message.text} error ${err}\n`);
+              winston.log('info', `Brain Err: Appending phrase for  ${message.text} error ${err}\n`);
             });
         }
       });
