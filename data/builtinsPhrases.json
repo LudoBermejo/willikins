@@ -39,6 +39,14 @@
         "results of #batch# and client tryp",
         "tell me about the results of client tryp and batch #batch#"
     ],
+    "YoutubeResultsOfBatch": [
+        "give me the youtube result of batch batch",
+        "show me the youtube results of batch #batch# client tryp",
+        "youtube results of batch #batch#",
+        "youtube results #batch#",
+        "youtube results of #batch# and client tryp",
+        "tell me about the youtube results of client tryp and batch #batch#"
+    ],
     "HasFinished": [
         "alert me when batch is finished",
         "finished batch tryp",
